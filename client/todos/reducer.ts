@@ -43,7 +43,7 @@ export default handleActions<IState>({
   [COMPLETE_TODO]: (state: IState, action: Action): IState => {
     return <IState>state.map(todo =>
       todo.id === action.payload.id ?
-        assign({}, todo, { completed: !todo.completed }) :
+        assign({}, todo, { completed: true }) :
         todo
     );
   },

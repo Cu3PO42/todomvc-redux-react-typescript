@@ -54,7 +54,7 @@ class TodoItem extends React.Component<TodoItemProps, TodoItemState> {
                  checked={todo.completed}
                  onChange={() => completeTodo(todo)} />
           <label onDoubleClick={this.handleDoubleClick.bind(this)}>
-            {todo.text}
+            {todo.text} (!)
           </label>
           <button className="destroy"
                   onClick={() => deleteTodo(todo)} />
